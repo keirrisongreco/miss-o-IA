@@ -21,7 +21,7 @@ const textoResultado = document.querySelector(".texto-resultado");
   },
   {
     enunciado:
-      "Depois de escolher onde se sentar, Artthur começa a fazer o trabalho até o sinal bater para o recreio e depois vai comer toda comida das escola. Ao voltar do recreio ele percebe que apagou os arquivos dele e as unicas pessoas que ficaram na sala depois que ele saiu  foram seus super amigos fiés e a garota falsa",
+      "Depois de escolher onde se sentar, Artthur começa a fazer o trabalho até o sinal bater para o recreio e depois vai comer toda comida das escola. Ao voltar do recreio ele percebe que apagou os arquivos dele e as unicas pessoas que ficaram na sala depois que ele saiu  foram seus super amigos fiés e a garota falsa. Quem ele acusa?",
     alternativas: [
       "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas",
       "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
@@ -44,3 +44,13 @@ const textoResultado = document.querySelector(".texto-resultado");
     ],
   },
 ];
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta() {
+  perguntaAtual = perguntas[atual];
+  caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+
+mostraPergunta();
